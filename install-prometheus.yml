@@ -1,5 +1,5 @@
 - name: Set up Prometheus
-  hosts: monitoring
+  hosts: all
   become: yes
   tasks:
     - name: Download Prometheus
