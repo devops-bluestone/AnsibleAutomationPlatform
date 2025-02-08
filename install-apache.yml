@@ -1,0 +1,13 @@
+- name: Install and update packages
+  hosts: all
+  become: yes
+  tasks:
+    - name: Ensure Apache is installed
+      ansible.builtin.yum:
+        name: httpd
+        state: present
+
+    - name: Ensure latest version of all packages
+      ansible.builtin.yum:
+        name: "*"
+        state: latest
