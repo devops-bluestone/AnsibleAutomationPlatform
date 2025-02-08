@@ -1,5 +1,5 @@
 - name: Install and update packages
-  hosts: all
+  hosts: rhel9-kvm-disk
   become: yes
   tasks:
     - name: Ensure Apache is installed
